@@ -5,11 +5,11 @@ services:
     links:
       - db
     ports:
-      - "6000:6000"
+      - "8080:8080"
     restart: always
+    container_name: "flask-app"
     volumes:
       - ../src:/app
-    container_name: "flask-app"
 
   db:
     image: mysql:8.0.28
